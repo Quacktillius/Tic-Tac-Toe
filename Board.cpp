@@ -18,13 +18,13 @@ void Board::playerMove(int r, int c, char v){
 }
 
 bool Board::win(char check){
-    int c1=0, c2=0, c3=0, c4=0;
+    int c3=0, c4=0;
     for(int i=0; i<4; i++){
         if(board[i][i]==check)
             c3+=1;
         if(board[i][3-i]==check)
             c4+=1;
-        
+        int c1=0, c2=0;
         for(int j=0; j<4; j++){
             if(board[i][j]==check)
                 c1+=1;
